@@ -3,27 +3,33 @@ from robot import Robot
 
 
 class battlefield:
-    def __init__(self, names):
-    
-        self.robot = Robot()
-        self.dinosaur = Dinosaur()
+    def __init__(self):    
+        self.robot = Robot("DG3")
+        self.dinosaur = Dinosaur("Carnotaurus", 400)
 
-    def __init__(self):
-        pass
     def run_game(self):
-        my_battlefield = battlefield('The Area')
+        # intro
+        # display welcome
+        self.display_welcome()
 
-Dinosaur = Dinosaur("Head Bash", 400, "robot was hit")
-Robot = Robot("Bone saw", 500, "dinosaur was hit")
-Dinosaur = Dinosaur("Bite", 400, "Wake-up Bevvy")
+        # main game 
+        # battle phase
+        self.battle_phase()
 
-def display_welcome(self):
+        # endgame
+        self.display_winner()
+
+        # Dinosaur = Dinosaur("Head Bash", 400, "robot was hit")
+        # Robot = Robot("Bone saw", 500, "dinosaur was hit")
+        # Dinosaur = Dinosaur("Bite", 400, "robot was hit")
+
+    def display_welcome(self):
         print('\nWelcome to an epic battle for the ages!\nOnly one side cna win!\n')
         
-        def battle_phase(self):
+    def battle_phase(self):
 
-            self.dinosaur.Dinosaur_attack_power(self.dinosaur)
-            self.robot.weapon_attack_power(self.robot)
+        self.dinosaur.attack(self.dinosaur)
+        self.robot.weapon_attack_power(self.robot)
 
         if self.Dinosaur_attack_power is True:
             print("robot attacks")
@@ -31,10 +37,9 @@ def display_welcome(self):
             print("dinosaur attacks")
 
         else:
-             self.robot, self.dinosaur = 'health_not_at_zero'()
+                self.robot, self.dinosaur = 'health_not_at_zero'
+                print("health not at zero")
 
 
-
-
-        def display_winner(self):
-            print( "The winner has been decided")
+    def display_winner(self):
+        print( "The winner has been decided")
