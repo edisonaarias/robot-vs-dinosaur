@@ -5,4 +5,4 @@ class Dinosaur:
         self.Dinosaur_health =  1400 
 
     def attack(self, robot):
-        pass
+        robot.robot_health -= self.Dinosaur_attack_power

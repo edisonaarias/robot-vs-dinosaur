@@ -2,7 +2,7 @@ from dinosaur import Dinosaur
 from robot import Robot
 
 
-class Battlefield:
+class battlefield:
     def __init__(self, names):
     
         self.robot = Robot()
@@ -11,7 +11,12 @@ class Battlefield:
     def __init__(self):
         pass
     def run_game(self):
-        pass
+        my_battlefield = battlefield('The Area')
+
+Dinosaur = Dinosaur("Head Bash", 400, "robot was hit")
+Robot = Robot("Bone saw", 500, "dinosaur was hit")
+Dinosaur = Dinosaur("Bite", 400, "Wake-up Bevvy")
+
     def display_welcome(self):
         print('\nWelcome to an epic battle for the ages!\nOnly one side cna win!\n')
         
