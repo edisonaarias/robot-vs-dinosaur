@@ -32,4 +32,4 @@ class Battlefield:
 
 
     def display_winner(self):
-        pass
+        print( "The winner has been decided")
