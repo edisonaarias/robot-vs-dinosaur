@@ -2,9 +2,10 @@ from weapon import Weapon
 
 class Robot:
     def __init__( self, name):
-        self.robot_name = name
-        self.robot_health = 1200
-        self.active_weapon = 'bone saw'
-        self.weapon_attack_power = Weapon()
+        self.name = name
+        self.health = 100
+        self.active_weapon = Weapon("laser Gun", 25)
+
     def attack(self, dinosaur):
-        dinosaur.health -= Weapon.attack_power
+        dinosaur.health -= self.active_weapon.attack_power
+        print(f"Hit!{dinosaur.name} has {dinosaur.health}!")
