@@ -1,5 +1,6 @@
 from dinosaur import Dinosaur
 from robot import Robot
+import random
 
 
 class battlefield:
@@ -16,9 +17,12 @@ class battlefield:
         print("Welcome to Robots vs Dinosaurs!")
 
     def battle_phase(self):
-        while self.robot.health > 0 and self.dinosaur.health > 0:
-            self.robot.attack(self.dinosaur)
-            self.dinosaur.attack(self.robot)
+        while self.robot.health >= 0 and self.dinosaur.health >= 0:
+            random_roll = random.randint(1,10)
+            if random_roll % 2 == 0:
+                self.robot.attack(self.dinosaur)
+            else:
+                self.dinosaur.attack(self.robot)
 
     def display_winner(self):
         if self.robot.health <= 0:

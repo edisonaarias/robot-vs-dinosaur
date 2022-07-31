@@ -7,3 +7,6 @@ robo_test = Robot("DG3 Test")
 
 dino_test.attack(robo_test)
 robo_test.attack(dino_test)
+
+battle = battlefield()
+battle.run_game()
